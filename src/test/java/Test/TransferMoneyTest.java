@@ -11,7 +11,7 @@ public class TransferMoneyTest {
 
     @Test
     void shouldTransferMoney(){
-        open("http://localhost:9999");
+        open("http://localhost:9999/");
         LoginPage loginPage = new LoginPage();
         loginPage
                 .validLogin(DataHelper.getAuthInfo())
