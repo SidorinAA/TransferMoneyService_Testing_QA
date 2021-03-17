@@ -1,6 +1,6 @@
-package Page;
+package ru.netology.Page;
 
-import Data.DataHelper;
+import ru.netology.Data.DataHelper;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
@@ -8,8 +8,8 @@ import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
 
 public class TransferPage {
-    private SelenideElement sumField = $("[data-test-id='amount']");
-    private SelenideElement fromField = $("[data-test-id='from']");
+    private SelenideElement sumField = $("[type='text']");
+    private SelenideElement fromField = $("[type='tel']");
     private SelenideElement cardField = $("[data-test-id='to']");
     private SelenideElement sendButton = $("[data-test-id='action-transfer']");
     private SelenideElement cancelButton = $("[data-test-id='action-cancel']");

@@ -1,9 +1,11 @@
-package Page;
+package ru.netology.Page;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
+import com.codeborne.selenide.SelenideElement;
 import lombok.val;
 
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
@@ -13,6 +15,7 @@ public class DashboardPage {
     private final String balanceStart = "баланс: ";
     private final String balanceFinish = " р.";
     private ElementsCollection refillButton = $$("[data-test-id='action-deposit']");
+    private SelenideElement refreshButton = $(byText("Обновить"));
 
 
     public TransferPage cardRefillButtonClickFirst() {
@@ -38,6 +41,15 @@ public class DashboardPage {
         return extractBalance(text);
     }
 
+    public static int cardBalanceAfterSendMoney(int balance, int amount) {
+        int total = balance - amount;
+        return total;
+    }
+
+    public static int cardBalanceAfterGetMoney(int balance, int amount) {
+        int total = balance + amount;
+        return total;
+    }
 
 
     private int extractBalance(String text) {
@@ -47,9 +59,14 @@ public class DashboardPage {
         return Integer.parseInt(value);
     }
 
-    public String returnToDashboard() {
-        val text = $("[data-test-id='dashboard']").text();
-        return text;
+//    public String returnToDashboard() {
+//        val text = $("[data-test-id='dashboard']").text();
+//        return text;
+//    }
+
+    public void setReload(){
+        refreshButton.click();
     }
+
 
 }

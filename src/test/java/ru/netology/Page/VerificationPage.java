@@ -1,14 +1,14 @@
-package Page;
+package ru.netology.Page;
 
-import Data.DataHelper;
+import ru.netology.Data.DataHelper;
 import com.codeborne.selenide.SelenideElement;
 
-import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 
 public class VerificationPage {
-    private SelenideElement codeField = $("[data-test-id=code]");
-    private SelenideElement verifyButton = $("[data-test-id=action-verify]");
+    private SelenideElement codeField = $("[type='text']");
+    private SelenideElement verifyButton = $(byText("Продолжить"));
 
 
     public DashboardPage validVerify(DataHelper.VerificationCode verificationCode) {
