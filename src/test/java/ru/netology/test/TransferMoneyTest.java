@@ -2,9 +2,9 @@ package ru.netology.Test;
 
 
 import lombok.val;
-import ru.netology.Data.DataHelper;
-import ru.netology.Page.DashboardPage;
-import ru.netology.Page.LoginPage;
+import ru.netology.data.DataHelper;
+import ru.netology.page.DashboardPage;
+import ru.netology.page.LoginPage;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selenide.open;
