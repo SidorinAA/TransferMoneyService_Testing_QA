@@ -69,27 +69,6 @@ public class TransferMoneyTest {
         transferMoney.errorMessage();
     }
 
-    @Test
-    void shouldReloadButtonWorked(){
-        open("http://localhost:9999/");
-        int amount = 3000;
-        val loginPage = new LoginPage();
-        val authInfo = DataHelper.getAuthInfo();
-        val verificationPage = loginPage.validLogin(authInfo);
-        val verificationCode = DataHelper.getVerificationCodeFor(authInfo);
-        val dashboard = verificationPage.validVerify(verificationCode);
-        val cardBalance01 = dashboard.getCardBalanceFirst();
-        val cardBalance02 = dashboard.getCardBalanceSecond();
-        val cardInfo = DataHelper.Card.getCardInfo01();
-        val transferMoney = dashboard.cardRefillButtonClickSecond();
-        transferMoney.transfer(cardInfo, amount);
-        dashboard.setReload();
-        assertEquals(10000, cardBalance01);
-        assertEquals(10000, cardBalance02);
-
-    }
-
-
-
+    
 
 }
