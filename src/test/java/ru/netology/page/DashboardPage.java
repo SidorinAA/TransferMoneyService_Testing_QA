@@ -59,11 +59,6 @@ public class DashboardPage {
         return Integer.parseInt(value);
     }
 
-//    public String returnToDashboard() {
-//        val text = $("[data-test-id='dashboard']").text();
-//        return text;
-//    }
-
     public void setReload(){
         refreshButton.click();
     }
