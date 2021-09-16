@@ -1,7 +1,7 @@
 # TransferMoneyService
 [![Build status](https://ci.appveyor.com/api/projects/status/dyxm53r1327wm4jc/branch/master?svg=true)](https://ci.appveyor.com/project/AlexeiSidorin/pageobject/branch/master)
 
-## Описание тестируемого проекта Smoke test прототипа
+## Описание тестируемого проекта прототипа (тестирование критического пути)
 
 Данный тест посвящен проверки новой функции перевода денег с одной карты на другую.
 
